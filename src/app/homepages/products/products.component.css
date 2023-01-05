@@ -1,0 +1,29 @@
+@import url('/src/app/homepages/homepages.component.css');
+@import url('/src/app/homepages/products-list/products-list.component.css');
+ .filter{
+    margin: 10px 0 50px 0;
+ }
+ .filter-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+ }
+
+ .filter-item{
+    margin: 0 10px;
+ }
+.filter-item:hover .filter-link{
+    color: #f33f3f;
+}
+ .filter-link{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #212529;
+ }  
+.pro-list {
+    list-style: none;
+}
+.pro-item{
+    margin: 10px 0 20px 0;
+}

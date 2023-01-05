@@ -1,0 +1,48 @@
+@import url('/src/app/homepages/homepages.component.css');
+@import url('/src/app/homepages/about/about.component.css');
+.form-name{
+    margin: 10px 0;
+}
+.form-name label{
+    font-size: medium;
+    font-weight: 500;
+}
+.form-name input{
+    padding: 10px ;
+    margin: 8px 0;
+    border: none;
+    outline:none;
+}
+form button{
+    margin-top: 20px;
+}
+form button:hover{
+    color: fff;
+    background-color: black;
+    border: none;
+}
+.about-title--active{
+    color: #dc345d;
+    margin-bottom: 30px;
+}
+.desP{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.contact-list{
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.contact-item{
+    padding: 20px 0;
+}
+.contact-item:hover .contact-link{
+    color: #dc345d;
+}
+.contact-link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(90, 90, 149);
+}

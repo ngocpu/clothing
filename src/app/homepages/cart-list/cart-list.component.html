@@ -1,0 +1,24 @@
+<div *ngIf="Items.length ===0" class="cart-no-cart">
+    <img src="https://adev42.com/frontend/assets/f8-shop/img/no-cart.png" alt="no-item" class="no-cart">
+    <span class="no-cart-text">Chưa  có sản phẩm</span>
+</div>
+<ng-container *ngIf="Items.length !==0">
+    <h4 class="cart-title">Sản Phẩm Đã Thêm</h4>
+    <ul class="cart-list">
+        <li class="cart-item" *ngFor="let item of Items">
+            <div class="cart-wrapp">
+                <div class="cart-img"><img [src]="item.img" [alt]="item.name"></div>
+                <div class="cart-comtent">
+                    <p class="cart-head">{{item.name}}</p>
+                    <p class="cart-des">{{item.des}}</p>
+                </div>
+                <div class="cart-price"><span>{{item.price}}</span> <span class="multiply">x</span> {{item.qnty}}</div>
+            </div>
+            <div class="cart-body">
+                <button (click)="remove(item)" class="btn btn-sm btn-danger remove">Remove</button>
+            </div>
+        </li>
+        <button  class="btn btn-danger view" routerLink="/cart">View to Cart >>></button>
+    </ul>
+</ng-container>
+

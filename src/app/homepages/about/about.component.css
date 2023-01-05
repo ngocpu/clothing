@@ -1,0 +1,89 @@
+@import url('/src/app/homepages/homepages.component.css');
+@import url('/src/app/homepages/products/products.component.css');
+.about-sub{
+     float: right;
+}
+.about-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.about-item{
+    padding: 15px;
+    margin: 0 10px;
+}
+.about-item:hover{
+    background-color:#f33f3f;
+    border-radius: 2px;
+}
+.about-item:hover svg{
+    color: #fff;
+}
+.about-link svg{
+    width: 20px;
+    height: 20px;
+}
+.member-img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 174px;              
+    margin-bottom: 10px;
+}
+.member-img:hover .mem-fil{
+    visibility: inherit;
+    transition: ease-in 3s;
+}
+.mem-fil{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    background-color: rgba(243,63,63,0.8);
+    visibility: hidden;
+    display: flex;
+ 
+}
+.mem-wrapp{
+    margin: auto;
+}
+.mem-item{
+    background-color: #fff;
+}
+
+.mem-link{
+    color: black;
+}
+.mem-item:hover{
+    background-color: #fff;
+}
+.mem-item:hover svg{
+    color: #f33f3f;
+}
+.member-content{
+    text-align: center;
+}
+
+.member-title h4{
+    color: #1a6692;
+}
+.member-title span{
+    color: #f33f3f;
+}
+.member-des{
+    margin: 15px 0;
+}
+.list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.item{
+    margin: 30px 10px;
+}
+.item img{
+    width: 100%;
+}
