@@ -12,9 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
   title = 'sixteen-clothing';
-  totalItem:number = 0
+  totalItem:any = 0
+  items = []
   constructor(private auth :AuthService, private cartservice:CartService){}
   ngOnInit(): void {
+    this.cartservice.getMgs()
+      .subscribe(res => {
+        this.items = res
+        this.totalItem = res.length
+      }) 
+   
     // this.isLoggedIn= !!this.tokenStoreage.getToken()
     // if(this.isLoggedIn){
     //   const user = this.tokenStoreage.getUser()

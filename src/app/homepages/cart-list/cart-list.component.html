@@ -12,11 +12,11 @@
                     <p class="cart-head">{{item.name}}</p>
                     <p class="cart-des">{{item.des}}</p>
                 </div>
-                <div class="cart-price"><span>{{item.price}}</span> <span class="multiply">x</span> {{item.qnty}}</div>
+                <div class="cart-price"><span>{{item.price |currency}}</span> <span class="multiply">x</span> {{item.qnty}}</div>
             </div>
-            <div class="cart-body">
+            <!-- <div class="cart-body">
                 <button (click)="remove(item)" class="btn btn-sm btn-danger remove">Remove</button>
-            </div>
+            </div> -->
         </li>
         <button  class="btn btn-danger view" routerLink="/cart">View to Cart >>></button>
     </ul>

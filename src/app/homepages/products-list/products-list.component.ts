@@ -11,7 +11,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ProductsListComponent implements OnInit{
   @Input()product:Products={} as Products 
-  @Output() newCartList = new EventEmitter<Products>();
+
 
   listProducts:Products[] =[]
   constructor(private Cartservice:CartService){
@@ -21,6 +21,5 @@ export class ProductsListComponent implements OnInit{
   }
   add(product:Products){
     this.Cartservice.addToCart(product)
-    this.newCartList.emit(product);
   }
 }

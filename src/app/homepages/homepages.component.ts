@@ -1,6 +1,7 @@
 import { ProductsService } from './products.service';
 import { Products } from './../types/products';
 import { Component, OnInit, Input } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-homepages',
@@ -13,8 +14,5 @@ export class HomepagesComponent implements OnInit {
   }
   ngOnInit(): void {
     this.products=this.productsService.getProducts()
-    this.products.forEach((item:any) => {
-      Object.assign(item,{qnty:1,total:item.price})
-    })
   }
 }

@@ -1,34 +1,57 @@
-<div class="container">
+
+<div class="container" style="margin-top: 100px;">
     <!-- <ng-container ></ng-container> -->
+   
+    <div class="heading">
+      <a routerLink="" class="heading-logo">
+        SIXTEEN
+        <div class="heading-lo-cart">Your Cart</div>
+      </a>
+    </div>
     <div class="row">
         <div class="col-full">
-            <ng-container >
+          <ng-container *ngIf="Items.length === 0">
+            <div class="cart-box">
+              <img src="https://adev42.com/frontend/assets/f8-shop/img/no-cart.png" alt="">
+              <div class="c-content">
+                <p>Your Cart is empty:(((</p>
+                <button class="btn btn-danger b-shop" routerLink="/products"> Let's Shoping ! </button>
+              </div>
+            </div>
+          </ng-container>
+            <ng-container *ngIf="Items.length !== 0">
                 <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col"><input type="checkbox" name=""  id="input"></th>
+                        <th scope="col"><p id="x">Product</p> </th>
+                        <th scope="col"><p id="x" style="margin-left: -3px; text-align: center;">Price  </p> </th>
+                        <th scope="col"><p id="x">Quanity</p></th>
+                        <th scope="col"><p id="x">Current Price</p> </th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
+                      <tr *ngFor="let item of Items">
+                          <th><input type="checkbox" name=""  id="input"></th>
+                          <th scope="row">
+                            <div class="content">
+                              <div class="cart-img"><img [src]="item.img" [alt]="item.name"></div>
+                              <div class="cart-comtent">
+                                  <p class="cart-head">{{item.name}}</p>
+                                  <p class="cart-des">{{item.des}}</p>
+                              </div>
+                            </div>
+                          </th>
+                          <td> <p class="price">{{item.price | currency}}</p></td>
+                          <td >
+                            <div class="qnty">
+                              <button class="btn btn-light down" (click)="down(item)">-</button>
+                              <input type="text" [value]="item.qnty" class="input">
+                              <button class="btn btn-light up" (click)="up(item)">+</button>
+                            </div>
+                          </td>
+                          <td > <p style="text-align: center;" class="price">{{item.total | currency}}</p></td>
+                          <td ><button class="btn btn-danger remove y" (click)="remove(item)">remove</button></td>
                       </tr>
                     </tbody>
                   </table>

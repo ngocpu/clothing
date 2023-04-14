@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -7,7 +8,7 @@ export class ProductsService {
 
   constructor() { }
   getProducts(){
-    return[
+    return ([
       {
         id:1,
         name:'Title1',
@@ -50,6 +51,6 @@ export class ProductsService {
         price:100,
         img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX8K1km9b_re0-hynpVuQx022tVC4s1E11mg&usqp=CAU"
       }
-    ]
+    ])
   }
 }

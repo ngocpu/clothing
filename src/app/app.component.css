@@ -1,7 +1,9 @@
 
 .nav-title{
     color: aliceblue;
-    font-weight: 700;
+    font-weight: 800;
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 25px;
 }
 .nav-title > span{
     color: #f33f3f;
@@ -11,6 +13,9 @@
 }
 .nav-item:hover .item{
     color: #e26464;
+}
+.item--active{
+    color: #f33f3f !important;
 }
 @media only screen and (max-width: 770px) {
    .navbar-nav{
@@ -85,7 +90,6 @@
     font-size: 1rem;
     line-height: 1rem;
     border-radius: 5px;
-
     color: #495057;
     background-color: rgb(242, 235, 235);
 }

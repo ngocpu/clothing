@@ -1,7 +1,7 @@
 
 .slider{
     position: relative;
-    background: url(../img/slide_01.jpg) top center/ cover no-repeat; 
+    background: url('https://media.istockphoto.com/id/1308237234/vi/anh/ph%E1%BB%A5-n%E1%BB%AF-m%E1%BA%B7c-v%C3%A1y-thanh-l%E1%BB%8Bch-chi-ti%E1%BA%BFt-street-style.jpg?s=612x612&w=0&k=20&c=3i-gmm2_-RmtKGzlpOnBETyUYuCXJh3kVIFQA_7P_CY=') top center/ cover no-repeat; 
     width: 100%;
     padding-top: 50%;
     display: flex;

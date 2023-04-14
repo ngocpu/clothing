@@ -9,19 +9,29 @@ import { outputAst } from '@angular/compiler';
   styleUrls: ['./cart-list.component.css'],
 })
 export class CartListComponent implements OnInit {
-  public x:any = JSON.parse(localStorage.getItem('Cart') || '')
-  public Items:any = this.x
-  public total: number = 0
+ 
+  public Items:any=[]
+  public total: number=0
   constructor(private Cartservice: CartService) {}
   ngOnInit(): void {
-    // this.Items = JSON.parse(localStorage.getItem('CartItemList') || '')
+    this.getItems()
+  }
+  getItems(){
     this.Cartservice.getMgs()
-          .subscribe((res) => {
-              this.Items = res;
-              this.total = this.Cartservice.getTotalPrice();
-          });
+    .subscribe((res) => {
+      let x = JSON.parse(localStorage.getItem('CartItemList') || '')
+      this.Items = x 
+      this.total = this.Cartservice.getTotalPrice();
+    });
   }
-  remove(product: Products) {
-    this.Cartservice.removeItem(product);
-  }
+  // remove(product: Products) {
+  //   this.Cartservice.removeItem(product);
+  //   if(this.Items.length === 1){
+  //     localStorage.clear()
+  //     this.Items=[]
+  //   } else{
+  //     this.Items = JSON.parse(localStorage.getItem('Cart1') || '')
+  //   }
+  //   this.ItemsEvent.emit(this.Items)
+  // }
 }
